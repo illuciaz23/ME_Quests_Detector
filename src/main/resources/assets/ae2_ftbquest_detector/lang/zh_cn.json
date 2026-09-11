@@ -1,9 +1,24 @@
 {
   "block.ae2_ftbquest_detector.me_quests_detector": "ME任务检测器",
   "ftbquests.task.ftbquests.fluid.consume_fluid": "消耗流体",
-  "ae2-ftbquests-detector.detector.uncharged": "设备未连接",
+  "ae2-ftbquests-detector.detector.uncharged": "设备离线",
   "ae2-ftbquests-detector.detector.no_owner": "无所属队伍",
-  "ae2-ftbquests-detector.detector.owner_is": "所属队伍： %s",
-  "ae2-ftbquests-detector.detector.invalid_owner": "所属队伍不存在"
-
+  "ae2-ftbquests-detector.detector.owner_is": "所属队伍：%s",
+  "ae2-ftbquests-detector.detector.team_name_too_short": "队伍名称少于 3 个字符，重载后可能无法显示，建议修改队伍名称",
+  "ae2-ftbquests-detector.detector.invalid_owner": "所属队伍不存在",
+  "ae2-ftbquests-detector.detector.network_conflict": "§c错误：同一ME网络中只允许存在一个ME任务检测器§r",
+  "ae2-ftbquests-detector.jade.tasks": "已完成任务：%d / %d",
+  "config.jade.plugin_ae2_ftbquest_detector.detector": "检测器扩展信息",
+  "ae2_ftbquest_detector.configuration.client.jadeShowOwnerInfo": "Jade 显示所属队伍",
+  "ae2_ftbquest_detector.configuration.client.jadeShowTaskProgress": "Jade 显示任务完成进度",
+  "ae2_ftbquest_detector.configuration.client.teamNameDisplayMode": "队伍名称显示样式",
+  "ae2_ftbquest_detector.configuration.jadeTaskProgress.ignoreHiddenTasks": "统计时忽略隐藏任务",
+  "ae2_ftbquest_detector.configuration.jadeTaskProgress.ignoreRepeatableTasks": "统计时忽略可重复任务",
+  "ae2_ftbquest_detector.configuration.jadeShowOwnerInfo": "Jade 显示所属队伍",
+  "ae2_ftbquest_detector.configuration.jadeShowTaskProgress": "Jade 显示任务完成进度",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode": "队伍名称显示样式",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.tooltip": "设置 Jade 与使用检测器时的所属队伍显示方式。",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.NAME_AND_SHORT_ID": "队伍名称 + 短 ID",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.NAME_ONLY": "仅队伍名称",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.SHORT_ID_ONLY": "仅队伍短 ID"
 }

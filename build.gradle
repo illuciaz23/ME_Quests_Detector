@@ -241,6 +241,7 @@ dependencies {
     implementation fg.deobf("dev.ftb.mods:ftb-teams-forge:${ftb_teams_version}")
     implementation fg.deobf("dev.ftb.mods:ftb-library-forge:${ftb_library_version}")
 
+    compileOnly fg.deobf("curse.maven:jade-324717:5640610")
     runtimeOnly fg.deobf("curse.maven:jade-324717:5640610")
     //implementation fg.deobf("curse.maven:ldlib-forge-626676:6497741")
     // FTB Quests

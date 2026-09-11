@@ -1,15 +1,13 @@
 package io.z23illucia.ae2_ftbquest_detector.mixin;
 
-import dev.ftb.mods.ftbquests.item.MissingItem;
 import dev.ftb.mods.ftbquests.quest.TeamData;
 import dev.ftb.mods.ftbquests.quest.task.FluidTask;
 import dev.ftb.mods.ftbquests.quest.task.Task;
-import io.z23illucia.ae2_ftbquest_detector.utility.IFluidTaskExtension;
+import io.z23illucia.ae2_ftbquest_detector.utility.QuestTaskEligibility;
 import io.z23illucia.ae2_ftbquest_detector.utility.SubmitHelper;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -25,13 +23,11 @@ public class TaskMixin {
     )
     private void injectSubmitFluidTask(TeamData teamData, ServerPlayer player, ItemStack craftedItem, CallbackInfo ci) {
         Task thisTask = (Task) (Object) this;
-        if(thisTask instanceof FluidTask self
-                && !teamData.isCompleted(self)
+        if (thisTask instanceof FluidTask self
+                && QuestTaskEligibility.canSubmit(self, teamData)
                 && self.consumesResources()
-        )
-        {
-            //System.out.println("submitFluid mixin" + self.submitItemsOnInventoryChange() );
-            SubmitHelper.submitTask(teamData, player, self);
+        ) {
+            SubmitHelper.submitTask(teamData, player, self, craftedItem);
         }
     }
 
@@ -41,14 +37,9 @@ public class TaskMixin {
             remap = false,
             cancellable = true)
     private void check(CallbackInfoReturnable<Boolean> cir) {
-        //System.out.println("check ifsubmit");
         Task thisTask = (Task) (Object) this;
-        if(thisTask instanceof FluidTask self)
-        {
-            //System.out.println("check ifsubmitfluid:" + self.consumesResources());
+        if (thisTask instanceof FluidTask self) {
             cir.setReturnValue(!self.consumesResources());
         }
-
     }
 }
-

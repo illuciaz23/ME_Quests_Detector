@@ -1,8 +1,24 @@
 {
   "block.ae2_ftbquest_detector.me_quests_detector": "ME Quests Detector",
   "ftbquests.task.ftbquests.fluid.consume_fluid": "Consume Fluid",
-  "ae2-ftbquests-detector.detector.uncharged": "Device Unconnected",
-  "ae2-ftbquests-detector.detector.no_owner": "No Owner Device",
+  "ae2-ftbquests-detector.detector.uncharged": "Device Offline",
+  "ae2-ftbquests-detector.detector.no_owner": "No Owner Team",
   "ae2-ftbquests-detector.detector.owner_is": "Owner Team is %s",
-  "ae2-ftbquests-detector.detector.invalid_owner": "Owner Team Does not Exist"
+  "ae2-ftbquests-detector.detector.team_name_too_short": "Team name is shorter than 3 characters; it may not display after reload",
+  "ae2-ftbquests-detector.detector.invalid_owner": "Owner Team Does not Exist",
+  "ae2-ftbquests-detector.detector.network_conflict": "§cError: only one ME Quests Detector is allowed per ME network§r",
+  "ae2-ftbquests-detector.jade.tasks": "Tasks: %d / %d",
+  "config.jade.plugin_ae2_ftbquest_detector.detector": "Detector Extra Info",
+  "ae2_ftbquest_detector.configuration.client.jadeShowOwnerInfo": "Show Owner Team In Jade",
+  "ae2_ftbquest_detector.configuration.client.jadeShowTaskProgress": "Show Task Progress In Jade",
+  "ae2_ftbquest_detector.configuration.client.teamNameDisplayMode": "Team name display",
+  "ae2_ftbquest_detector.configuration.jadeTaskProgress.ignoreHiddenTasks": "Ignore Hidden Tasks In Counts",
+  "ae2_ftbquest_detector.configuration.jadeTaskProgress.ignoreRepeatableTasks": "Ignore Repeatable Tasks In Counts",
+  "ae2_ftbquest_detector.configuration.jadeShowOwnerInfo": "Show Owner Team In Jade",
+  "ae2_ftbquest_detector.configuration.jadeShowTaskProgress": "Show Task Progress In Jade",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode": "Team name display",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.tooltip": "How the owner team is shown in Jade and when using the detector.",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.NAME_AND_SHORT_ID": "Name + short id",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.NAME_ONLY": "Name only",
+  "ae2_ftbquest_detector.configuration.teamNameDisplayMode.SHORT_ID_ONLY": "Short id only"
 }
